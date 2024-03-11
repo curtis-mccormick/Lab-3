@@ -1,67 +1,71 @@
 m255
 K4
 z2
+!s99 nomlopt
+!s11f vlog 2021.3 2021.07, Jul 13 2021
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/media/disk2/Dropbox (VLSIARCH - OSU)/ecen 3233 F21/Labs_F21/Lab3/Lab3/fsm
+Z0 dC:/Users/cumccor/Documents/Lab-3/Lab3/SV
 T_opt
-Z1 !s110 1634053591
-V=N6OImSC;:idMJf6Z8Od92
-04 2 4 work tb fast 0
-=1-04d4c455214a-6165add7-be1e4-1a56cb
+Z1 !s110 1710188208
+VG6iWjomL;gC`4]1F23eek1
+04 8 4 work stimulus fast 0
+=1-00be4390592b-65ef66b0-263-31f4
+!s124 OEM100
 o-quiet -auto_acc_if_foreign -work work +acc
 Z2 tCvgOpt 0
 n@_opt
-OL;O;10.7e;67
-vclk_div
-Z3 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+OL;O;2021.3;73
+vFSM
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
 R1
 !i10b 1
-!s100 G0W@kMdKY7A0SXdVd^k4b3
-IUjElP`E:C:Lnmb0?P`9le0
-Z4 VDg1SIo80bB@j0V0VzS_@n1
-!s105 clk_div_sv_unit
+!s100 2b6h[7Im5f`^bh[ENR@az3
+IXQERgVF7d1]kUPz`0Oa9N2
 S1
 R0
-Z5 w1634051013
-8clk_div.sv
-Fclk_div.sv
-L0 1
-Z6 OL;L;10.7e;67
+w1710188142
+8fsm.sv
+Ffsm.sv
+!i122 0
+L0 1 74
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2021.3;73
 r1
 !s85 0
 31
-Z7 !s108 1634053591.000000
-Z8 !s107 tb.sv|clk_div.sv|
-Z9 !s90 -reportprogress|300|clk_div.sv|tb.sv|
+Z6 !s108 1710188208.000000
+Z7 !s107 fsm_tb.sv|fsm.sv|
+Z8 !s90 -reportprogress|300|fsm.sv|fsm_tb.sv|
 !i113 0
-Z10 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R2
-vtb
+n@f@s@m
+vstimulus
 R3
 R1
 !i10b 1
-!s100 c1lo=F7Pl]K_cad_[@L<X3
-I?>N`i:MFI2;c`?Fh7eBUi1
-R4
-!s105 tb_sv_unit
+!s100 3P<JZ[kUcF;0n7J=Sa7iO0
+I0BU_NlaSDX4AiWYI9DfZn3
 S1
 R0
+w1710188197
+8fsm_tb.sv
+Ffsm_tb.sv
+!i122 0
+L0 2 56
+R4
 R5
-8tb.sv
-Ftb.sv
-L0 2
-R6
 r1
 !s85 0
 31
+R6
 R7
 R8
-R9
 !i113 0
-R10
+R9
 R2
