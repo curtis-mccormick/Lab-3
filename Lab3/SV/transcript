@@ -1,3 +1,25 @@
+# do fsm.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is cumccor@CEAT-ENDV350-05.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is axmal@DESKTOP-YOGA.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt2".  Locker is axmal@DESKTOP-YOGA.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt3".  Locker is axmal@DESKTOP-YOGA.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt4".  Locker is axmal@DESKTOP-YOGA.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.3 Compiler 2021.07 Jul 13 2021
+# Start time: 12:04:56 on Mar 25,2024
+# vlog fsm.sv fsm_tb.sv 
+# -- Compiling module FSM
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 12:04:57 on Mar 25,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 12:04:57 on Mar 25,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "FSM(fast)".
 # //  ModelSim SE-64 2021.3 Jul 13 2021
 # //
 # //  Copyright 1991-2021 Mentor Graphics Corporation
@@ -11,28 +33,20 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# do fsm.do
-# Model Technology ModelSim SE-64 vlog 2021.3 Compiler 2021.07 Jul 13 2021
-# Start time: 15:16:48 on Mar 11,2024
-# vlog -reportprogress 300 fsm.sv fsm_tb.sv 
-# -- Compiling module FSM
-# -- Compiling module stimulus
-# 
-# Top level modules:
-# 	stimulus
-# End time: 15:16:48 on Mar 11,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim -voptargs="+acc" work.stimulus 
-# Start time: 15:16:48 on Mar 11,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Note: (vopt-143) Recognized 1 FSM in module "FSM(fast)".
 # Loading sv_std.std
 # Loading work.stimulus(fast)
 # Loading work.FSM(fast)
-# .main_pane.list.interior.cs.body
-# .main_pane.wave.interior.cs.body.pw.wf
-# ** UI-Msg: (vish-4014) No objects found matching '/stimulus/dut/a'.
-# Error in macro ./fsm.do line 45
-# ** UI-Msg: (vish-4014) No objects found matching '/stimulus/dut/a'.
-#     while executing
-# "add wave -noupdate -divider -height 32 "FSM""
+# .list
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: cumccor  Hostname: CEAT-ENDV350-05  ProcessID: 12788
+#           Attempting to use alternate WLF file "./wlft9cnvby".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft9cnvby
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode

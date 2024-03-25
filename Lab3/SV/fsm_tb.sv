@@ -28,30 +28,34 @@ module stimulus ();
 	// Tells when to finish simulation
 	#500 $finish;		
      end
-
    always 
      begin
 	desc3 = handle3;
-	#5 $fdisplay(desc3, "%b %b %b|| %b", 
-		     reset, LI, RI, y);
      end   
+     always @(negedge clk) begin
+
+	#10 $fdisplay(desc3, "%b | %b %b || %b", 
+		 reset, LI, RI, y);
+
+     end
+
    
    initial 
      begin      
 	#0   reset = 1'b1;
-	#1  reset = 1'b0;	
-
-	#20   LI = 1'b0;
+     #0   LI = 1'b0;
      #0   RI = 1'b0;
+	#10  reset = 1'b0;	
 
-	#20  LI = 1'b1;
-	#0  RI = 1'b0;
+	#20   LI = 1'b1;
+     #40   LI = 1'b0;
 
-	#20  LI = 1'b0;
-     #0  RI = 1'b1;
+	#20  RI = 1'b1;
+	#40  RI = 1'b0;
 
-	#20  LI = 1'b1;
-     #0  RI = 1'b1;
+	#20  LI = 1'b1; RI = 1'b1;
+     #40  LI = 1'b0; RI = 1'b0;
+
      end
 
 endmodule // FSM_tb
