@@ -25,11 +25,11 @@ always_comb
     case (state)
         S0: begin
           y <= 6'b000000;
-            if (LI && !RI) 
+            if (LI & !RI) 
                 nextstate = S1;
-            else if (RI && !LI)
+            else if (RI & !LI)
                 nextstate = S4;
-            else if (LI && RI)
+            else if (LI & RI)
                 nextstate = S7;
             else   
                 nextstate = S0;

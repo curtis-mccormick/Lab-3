@@ -25,16 +25,14 @@ module stimulus ();
      begin
 	// Gives output file name
 	handle3 = $fopen("fsm.out");
+     desc3 = handle3;
 	// Tells when to finish simulation
+     
 	#500 $finish;		
      end
-   always 
-     begin
-	desc3 = handle3;
-     end   
      always @(negedge clk) begin
 
-	#10 $fdisplay(desc3, "%b | %b %b || %b", 
+	$fdisplay(desc3, "%b | %b %b || %b", 
 		 reset, LI, RI, y);
 
      end
