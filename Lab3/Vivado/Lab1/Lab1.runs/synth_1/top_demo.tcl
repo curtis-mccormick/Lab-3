@@ -87,6 +87,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
+  C:/Users/cumccor/Documents/Lab-3/Lab3/SV/clk_div.sv
   C:/Users/cumccor/Documents/Lab-3/Lab3/Vivado/Lab1/Lab1.srcs/sources_1/imports/vivado/digit2segments.sv
   C:/Users/cumccor/Documents/Lab-3/Lab3/SV/fsm.sv
   C:/Users/cumccor/Documents/Lab-3/Lab3/Vivado/Lab1/Lab1.srcs/sources_1/imports/vivado/segment_driver.sv

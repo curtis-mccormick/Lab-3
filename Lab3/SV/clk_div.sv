@@ -11,12 +11,12 @@ module clk_div (input logic clk, input logic rst, output logic clk_en);
 
    if(clk_count = 27'b111_0111_0011_0101_1001_0100_0000)
    begin 
-      clk_en = 1'b1;
-      clk_count = 27'b000_0000_0000_0000_0000_0000_0000;
+      clk_en <= 1'b1;
+      clk_count <= 27'b000_0000_0000_0000_0000_0000_0000;
    end
    else
    begin
-      clk_en = 1'b0;
+      clk_en <= 1'b0;
    end
    
 endmodule // clk_div

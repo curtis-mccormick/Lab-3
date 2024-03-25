@@ -46,7 +46,8 @@ module top_demo
  
   
   // Place TicTacToe instantiation here
- FSM dut(clk, btn[0], sw[1], sw[0], led[5:0]);
+ clk_div dut1(sysclk_125mhz, btn[0], clk_en);
+ FSM dut2(clk_en, btn[0], sw[1], sw[0], led[5:0]);
  
   // 7-segment display
   segment_driver driver(
