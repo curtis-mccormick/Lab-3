@@ -43,11 +43,22 @@ module top_demo
   logic [16:0] CURRENT_COUNT;
   logic [16:0] NEXT_COUNT;
   logic        smol_clk;
+  logic [5:0] y;
+  logic left;
+  logic right;
+  logic reset;
+  logic clk_en;
  
+    assign reset = btn[0];
+    assign right = sw[1];
+    assign left = sw[0];
   
   // Place TicTacToe instantiation here
- clk_div dut1(sysclk_125mhz, btn[0], clk_en);
- FSM dut2(clk_en, btn[0], sw[1], sw[0], led[5:0]);
+ clk_div clock(sysclk_125mhz, reset , clk_en);
+ 
+ FSM dut(clk_en, reset, right , left, y);
+ 
+    assign led[6:1] = y[5:0];
  
   // 7-segment display
   segment_driver driver(
@@ -57,7 +68,7 @@ module top_demo
   .digit1(4'b0111),
   .digit2(sw[7:4]),
   .digit3(4'b1111),
-  .decimals({1'b0, btn[2:1]}),
+  .decimals({1'b0, btn[2:0]}),
   .segment_cathodes({sseg_dp, sseg_cg, sseg_cf, sseg_ce, sseg_cd, sseg_cc, sseg_cb, sseg_ca}),
   .digit_anodes(sseg_an)
   );
